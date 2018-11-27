@@ -1,37 +1,163 @@
-## Welcome to GitHub Pages
+[TOC]()
 
-You can use the [editor on GitHub](https://github.com/viguo/viguo.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+# 前提条件和准备工作
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+在开始机器学习速成课程之前，请先阅读下面的前提条件和准备工作部分，以确保您已做好完成所有单元所需的准备工作。
 
-### Markdown
+## 前提条件
+机器学习速成课程并不会假定或要求您预先掌握机器学习方面的任何知识。但是，为了能够理解课程中介绍的概念并完成练习，您最好满足以下前提条件：
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+ - **掌握入门级代数知识**， 您应该了解变量和系数、线性方程式、函数图和直方图（熟悉对数和导数等更高级的数学概念会有帮助，但不是必需条件）。
+ - **熟练掌握编程基础知识**，并且具有一些使用 Python 进行编码的经验。 机器学习速成课程中的编程练习是通过 TensorFlow 并使用 Python 进行编码的。您无需拥有任何 TensorFlow 经验，但应该能够熟练阅读和编写包含基础编程结构（例如，函数定义/调用、列表和字典、循环和条件表达式）的 Python 代码。
 
-```markdown
-Syntax highlighted code block
+## 准备工作
+### Pandas 使用入门
+机器学习速成课程中的编程练习使用 Pandas 库来操控数据集。如果您不熟悉 Pandas，建议您先学习Pandas 简介教程，该教程介绍了练习中使用的主要 Pandas 功能。
+#### 低阶 TensorFlow 基础知识
+机器学习速成课程中的编程练习使用 TensorFlow 的高阶 tf.estimator API 来配置模型。如果您有兴趣从头开始构建 TensorFlow 模型，请学习以下教程：
 
-# Header 1
-## Header 2
-### Header 3
+ - TensorFlow Hello World：在低阶 TensorFlow 中编码的“Hello World”。
+ - TensorFlow 编程概念：演示了 TensorFlow 应用中的基本组件：张量、指令、图和会话。
+ - 创建和操控张量：张量快速入门 - TensorFlow 编程中的核心概念。此外，还回顾了线性代数中的矩阵加法和乘法概念。
+#### 主要概念和工具
+机器学习速成课程中介绍并应用了以下概念和工具。有关详情，请参阅链接的资源。
+##### 数学
+ - **代数**
+   - 变量、系数和函数
+   - 线性方程式，例如 $y = b + w_1x_1 + w_2x_2$
+   - 对数和对数方程式，例如 $y = ln(1+ e^z)$
+   -  S 型函数
 
-- Bulleted
-- List
+ - **线性代数**
+    - 张量和张量等级
+    - 矩阵乘法
+ - **三角学**
+   - Tanh（作为激活函数进行讲解，无需提前掌握相关知识）
+ - **统计信息**
+   - 均值、中间值、离群值和标准偏差
+   - 能够读懂直方图 
+ - **微积分（可选，适合高级主题）**
+   - 概念（您不必真正计算导数）
+   - 梯度或斜率
+   - 偏导数（与梯度紧密相关）
+   - 链式法则（带您全面了解用于训练神经网络的反向传播算法）
+#### Python 编程
+- **基础 Python**
+  - Python 教程中介绍了以下 Python 基础知识：
+  - 定义和调用函数：使用位置和关键字参数
+  - 字典、列表、集合（创建、访问和迭代）
+  - for 循环：包含多个迭代器变量的 for 循环（例如 for a, b in [(1,2), (3,4)]）if/else 条件块和条件表达式
+  - 字符串格式（例如 '%.2f' % 3.14）
+  - 变量、赋值、基本数据类型（int、float、bool、str）
+  - pass 语句
+- **中级 Python**
+Python 教程还介绍了以下更高级的 Python 功能：
+  - 列表推导式
+  - Lambda 函数
+ - **第三方 Python 库**
+机器学习速成课程代码示例使用了第三方库提供的以下功能。无需提前熟悉这些库；您可以在需要时查询相关内容。
+    - Matplotlib（适合数据可视化）
+   - pyplot 模块
+   - cm 模块
+   - gridspec 模块
+   - Seaborn（适合热图）
+   - heatmap 函数
+   - Pandas（适合数据处理）
+   -  DataFrame 类
+   - NumPy（适合低阶数学运算）
+   - linspace 函数
+   - random 函数
+    - array 函数
+   - arange 函数
+   - scikit-learn（适合评估指标）
+   - metrics 模块
+#### Bash 终端/云端控制台
+要在本地计算机上或云端控制台中运行编程练习，您应该能熟练使用命令行：
+ - Bash 参考手册
+-  Bash 快速参考表
+- 了解 Shell
 
-1. Numbered
-2. List
+# 机器学习简介
+本单元将为您介绍机器学习 (ML)。
+- **预计用时：3 分钟**
+- **学习目标**
+	- 了解掌握机器学习技术的实际优势
+  -	理解机器学习技术背后的理念
 
-**Bold** and _Italic_ and `Code` text
+-	[视频讲座](https://cloud.189.cn/t/uMFnuaQfuqMn)
+## 框架处理
+### 视频讲座
+本单元探讨了如何将某个任务构建为机器学习问题，并介绍了各种机器学习方法中通用的很多基本词汇术语。
+- 学习目标
+  - 复习机器学习基本术语。
+  - 了解机器学习的各种用途。
+ ### 机器学习主要术语
+ 什么是（监督式）机器学习？简单来说，它的定义如下：
+ - 机器学习系统通过学习如何组合输入信息来对从未见过的数据做出有用的预测。
+下面我们来了解一下机器学习的基本术语。
+#### 标签
+**标签**是我们要预测的事物，即简单线性回归中的 y 变量。标签可以是小麦未来的价格、图片中显示的动物品种、音频剪辑的含义或任何事物。
+#### 特征
+**特征**是输入变量，即简单线性回归中的 x 变量。简单的机器学习项目可能会使用单个特征，而比较复杂的机器学习项目可能会使用数百万个特征，按如下方式指定：
+> \{x_1, x_2, ... x_N\}
 
-[Link](url) and ![Image](src)
-```
+在垃圾邮件检测器示例中，特征可能包括：
+- 电子邮件文本中的字词
+- 发件人的地址
+- 发送电子邮件的时段
+- 电子邮件中包含“一种奇怪的把戏”这样的短语。                                    
+#### 样本
+**样本**是指数据的特定实例：x。（我们采用粗体 x 表示它是一个矢量。）我们将样本分为以下两类：
+- 有标签样本
+- 无标签样本
+**有标签样本**同时包含特征和标签。即：
+  > labeled examples: {features, label}: (x, y)
+  
+ 我们使用有标签样本来训练模型。在我们的垃圾邮件检测器示例中，有标签样本是用户明确标记为“垃圾邮件”或“非垃圾邮件”的各个电子邮件。
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+例如，下表显示了从包含加利福尼亚州房价信息的数据集中抽取的 5 个有标签样本：
 
-### Jekyll Themes
+| housingMedianAge |  totalRooms| totalBedrooms | medianHouseValue |
+|--|--|--|--|
+|15  | 5612 | 1283 |66900  |
+|--|--|--|--|
+| 19 |7650  | 7650 | 80100 |
+|--|--|--|--|
+|17 |720  |174  |85700  |
+|--|--|--|--|
+|14| 1501 |337  | 73400 |
+|--|--|--|--|
+| 20 | 1454 | 326 | 65500 |
+**无标签样**本包含特征，但不包含标签。即：
+ >  unlabeled examples: {features, ?}: (x, ?)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/viguo/viguo.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+在使用有标签样本训练了我们的模型之后，我们会使用该模型来预测无标签样本的标签。在垃圾邮件检测器示例中，无标签样本是用户尚未添加标签的新电子邮件。
 
-### Support or Contact
+#### 模型
+模型定义了特征与标签之间的关系。例如，垃圾邮件检测模型可能会将某些特征与“垃圾邮件”紧密联系起来。我们来重点介绍一下模型生命周期的两个阶段：
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- 训练表示创建或学习模型。也就是说，您向模型展示有标签样本，让模型逐渐学习特征与标签之间的关系。
+
+- 推断表示将训练后的模型应用于无标签样本。也就是说，您使用训练后的模型来做出有用的预测 (y')。例如，在推断期间，您可以针对新的无标签样本预测 medianHouseValue。
+
+#### 回归与分类
+**回归模型**可预测连续值。例如，回归模型做出的预测可回答如下问题：
+- 加利福尼亚州一栋房产的价值是多少？
+- 用户点击此广告的概率是多少？
+
+**分类模型**可预测离散值。例如，分类模型做出的预测可回答如下问题：
+- 某个指定电子邮件是垃圾邮件还是非垃圾邮件？
+- 这是一张狗、猫还是仓鼠图片？
+> 关键字词
+> >   分类模型  样本   特征  推断   标签   模型   回归 训练
+
+
+
+
+
+
+
+
+
+
+
