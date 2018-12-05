@@ -1,8 +1,8 @@
 # chapter1 Overview
--  **target of this training**
--  **chip design flow**
--  **synthesis in chip design**
-- **Q&A**
+-  training object
+-  chip design flow
+-  synthesis in chip design
+- Q&A
 # chapter2 data prepare 
 - **library prepare**
 	1. standard cell library
@@ -25,14 +25,14 @@
 	2. link library
 	3. search path
 - **option setting**
-	1. HDL
+	1. read RTL
 	2. optimization
 - **read_design**
 	1. verilog/system verilog
 	2. define
 	3. link
 - **lab**
-	1. write a script to read verilog
+	1. write a dc script and load the design 
 
 # chapter4 synthesis 
 - **running synthesis**
@@ -44,25 +44,38 @@
 	1. RTL to GTECH
 	2. GTECH to mapped cell
 	3. design rule fix
-	4. critial timing path optimization
+	4. critical timing path optimization
 - **check netlist quality**
 	1.	floating inputs
 - **check constraint quality**
 	1. unconstrained path
-	2. unclocked registers
+	2. not clocked registers
 - **check timing reports**
 	1. report_qor
 	2. report_timing
 - **lab**
-	1. run synthesis and understand the reports
-# chapter5 debug and improve timing
-- analyze timing result
-- resolve real case
-# chapter6 DC compiler GUI
-- introduce DC compiler GUI	
+	- run synthesis and understand the reports
+# chapter5 debug and improve result
+- what's PPA
+- analyze and improve timing
+- analyze and improve power
+- analyze and improve the area
+- lab
+	- analyze the result and give feedback about improvement
+# chapter6 Design Compiler GUI
+- introduce DC compiler GUI
+- lab 
+	- operate in the GUI	
 
-# chapter7 frequent command
-- tcl system
-- class
+# chapter7 program in dc_shell
+- tcl syntax
+- attribute 
+- dc scripts
 - lab :
-	1. write a simple scripts
+	-	 write a simple scripts
+# chapter8 physical aware synthesis
+- why synthesis need to aware physical information
+- wire load model
+- read physical information
+- lab 
+	- run  physical aware synthesis
