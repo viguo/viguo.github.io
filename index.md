@@ -79,3 +79,11 @@
 - read physical information
 - lab
 	- run  physical aware synthesis
+# chapter9 run MCU synthesis
+- run lab
+# chapter10 advance synthesis
+- optimize the dynamic power with toggle information
+- write svf file for formality
+- clock gating insertion
+# chapter 11 backup
+- introduce the advanced synthesis class
