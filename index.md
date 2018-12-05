@@ -3,56 +3,56 @@
 -  chip design flow
 -  synthesis in chip design
 - Q&A
-# chapter2 data prepare 
+# chapter2 data prepare
 - **library prepare**
-	1. standard cell library
-	2. memory library
-	3. macro library
-	4. IO library
+	- standard cell library
+	-  memory library
+	-  macro library
+	-  IO library
 - **design prepare**
-	1. file list
-	2. include file
+	-  file list
+	-  include file
 - **constraint**
-	1. timing constraint
-	2. donot touch
-	3. dont use
+	-  timing constraint
+	- donot touch
+	- dont use
 - **Lab**
-	1. Convert .lib to .db
-	2. familiar .lib file
+	- Convert .lib to .db
+	- familiar .lib file
 # chapter3 run dc
 - **library setting**
-	1. target library
-	2. link library
-	3. search path
+	- target library
+	- link library
+	- search path
 - **option setting**
-	1. read RTL
-	2. optimization
+	- read RTL
+	- optimization
 - **read_design**
-	1. verilog/system verilog
-	2. define
-	3. link
+	- verilog/system verilog
+	- define
+	- link
 - **lab**
-	1. write a dc script and load the design 
+	- write a dc script and load the design
 
-# chapter4 synthesis 
+# chapter4 synthesis
 - **running synthesis**
-	1. elaborate design
-	2. link design
-	3. compile_ultra options
-	4. report
+	- elaborate design
+	- link design
+	- compile_ultra options
+	- report
 - **introduce synthesis process**
-	1. RTL to GTECH
-	2. GTECH to mapped cell
-	3. design rule fix
-	4. critical timing path optimization
+	- RTL to GTECH
+	- GTECH to mapped cell
+	- design rule fix
+	- critical timing path optimization
 - **check netlist quality**
-	1.	floating inputs
+	-	floating inputs
 - **check constraint quality**
-	1. unconstrained path
-	2. not clocked registers
+	- unconstrained path
+	- not clocked registers
 - **check timing reports**
-	1. report_qor
-	2. report_timing
+	- report_qor
+	- report_timing
 - **lab**
 	- run synthesis and understand the reports
 # chapter5 debug and improve result
@@ -64,12 +64,12 @@
 	- analyze the result and give feedback about improvement
 # chapter6 Design Compiler GUI
 - introduce DC compiler GUI
-- lab 
-	- operate in the GUI	
+- lab
+	- operate in the GUI
 
 # chapter7 program in dc_shell
 - tcl syntax
-- attribute 
+- attribute
 - dc scripts
 - lab :
 	-	 write a simple scripts
@@ -77,5 +77,5 @@
 - why synthesis need to aware physical information
 - wire load model
 - read physical information
-- lab 
+- lab
 	- run  physical aware synthesis
