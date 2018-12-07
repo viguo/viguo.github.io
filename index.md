@@ -19,7 +19,13 @@
 - **Lab**
 	- Convert .lib to .db
 	- familiar .lib file
-# chapter3 run dc
+# chapter3 tcl introduction
+  - tcl overview
+  - tcl  syntax
+  - common commands in dc_shell
+  - lab
+    write tcl script
+# chapter5 run dc
 - **library setting**
 	- target library
 	- link library
@@ -34,7 +40,7 @@
 - **lab**
 	- write a dc script and load the design
 
-# chapter4 synthesis
+# chapter6 synthesis
 - **running synthesis**
 	- elaborate design
 	- link design
@@ -55,7 +61,7 @@
 	- report_timing
 - **lab**
 	- run synthesis and understand the reports
-# chapter5 debug and improve result
+# chapter7 debug and improve result
 - what's PPA
 - analyze and improve timing
 - analyze and improve power
@@ -67,19 +73,17 @@
 - lab
 	- operate in the GUI
 
-# chapter7 program in dc_shell
-- tcl syntax
-- attribute
-- dc scripts
-- lab :
-	-	 write a simple scripts
+# chapter8 program in dc_shell
+- data structure
+- class attribution
+- lab
 # chapter8 physical aware synthesis
 - why synthesis need to aware physical information
 - wire load model
 - read physical information
 - lab
 	- run  physical aware synthesis
-# chapter9 run MCU synthesis
+# chapter10 run MCU synthesis
 - run lab
 # chapter10 advance synthesis
 - optimize the dynamic power with toggle information
