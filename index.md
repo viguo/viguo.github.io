@@ -73,7 +73,7 @@
 - lab
 	- operate in the GUI
 
-# chapter8 program in dc_shell
+# chapter7 program in dc_shell
 - data structure
 - class attribution
 - lab
