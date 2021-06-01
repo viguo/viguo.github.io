@@ -44,9 +44,15 @@
 
 20. 苹果电脑mac复制VNC连接或ssh连接后，登录出错怎么办？
 
-21. 我需要使用matab，如何安装？
+21. cuda 安装路径在哪？
 
-22. pycharm里面设置python解释器，需要设置哪个呢？（/root/anaconda3/bin/python）
+22. anaconda 安装路径在哪？
+
+23. pytorch 安装路径在哪？
+
+24. pycharm里面设置python解释器，需要设置哪个呢？
+
+25. 我需要使用matab，如何安装？
 
     
 
@@ -268,3 +274,52 @@ Ubuntu系统的服务器不支持安装百度官方的网盘软件。但是有�
 ### 20. 苹果电脑mac复制VNC连接或ssh连接后，登录出错怎么办？
 
 VNC的IP和端口必须手动填写，不能copy！这是因为mac会将copy的数字转为字符，导致连接失败。
+
+
+
+### 21. cuda 安装路径在哪？
+
+cuda 默认安装路径为 /usr/local/cuda-XX.X(XX.X 为版本号，例如10.0)，但一般在安装过程中会软链到/usr/local/cuda上, 采用如下命令可以查看/usr/local/cuda具体链接到哪个版本
+
+（base）root@48cead0855eb:~#ll /usr/local/cuda
+
+​    					     /usr/local/cuda -> usr/local/cuda-10.0
+
+如果系统中安装了多个版本cuda toolkit，可以手动修改/usr/local/cuda的软链位置，例如：
+
+（base）root@48cead0855eb:~# sudo ln -s /usr/local/cuda-10.0 /usr/local/cuda
+
+（base）root@48cead0855eb:~# ll /usr/local/cuda
+
+​							/usr/local/cuda -> /usr/local/cuda-10.0
+
+
+
+### 22.anaconda 安装路径在哪？
+
+/root/miniconda3/bin/conda
+
+可以用如下命令查找：
+
+(base) root@48cead0855eb:~# which conda
+
+/root/miniconda3/bin/conda
+
+### 23.pytorch 安装路径在哪？
+
+/root/miniconda3/lib/python3.7/site-packages/torch
+
+可以用如下命令查找：
+
+（base）root@48cead0855eb:~# python
+
+》》》 import torch
+
+》》》 torch.__path__
+
+['/root/miniconda3/lib/python3.7/site-packages/torch']
+
+
+
+
+
